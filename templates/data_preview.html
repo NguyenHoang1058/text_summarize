@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Xem Trước Dữ Liệu</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body class="bg-light">
+    <div class="container mt-5">
+        <div class="d-flex justify-content-between align-items-center mb-4">
+            <h2>📊 Xem Trước Dữ Liệu (50 dòng đầu)</h2>
+            <a href="/" class="btn btn-secondary fw-bold">⬅️ Trở Về Bảng Điều Khiển</a>
+        </div>
+
+        <div class="table-responsive shadow bg-white rounded p-3">
+            <table class="table table-striped table-hover table-bordered align-middle">
+                <thead class="table-dark text-center">
+                    <tr>
+                        <th style="width: 25%">Tiêu đề (Title)</th>
+                        <th style="width: 60%">Nội dung (Content)</th>
+                        <th style="width: 15%">Đường dẫn</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for row in data %}
+                    <tr>
+                        <td class="fw-bold">{{ row[0][:80] }}{{ '...' if row[0]|length > 80 else '' }}</td>
+                        <td class="text-muted" style="font-size: 0.9em;">{{ row[1][:200] }}{{ '...' if row[1]|length > 200 else '' }}</td>
+                        <td class="text-center">
+                            <a href="{{ row[2] }}" target="_blank" class="btn btn-sm btn-outline-primary">Mở Link</a>
+                        </td>
+                    </tr>
+                    {% else %}
+                    <tr>
+                        <td colspan="3" class="text-center text-danger fw-bold py-4">Chưa có dữ liệu nào!</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+</body>
+</html>

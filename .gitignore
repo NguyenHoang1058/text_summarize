@@ -1,0 +1,101 @@
+# ========================
+
+# Python
+
+# ========================
+
+**pycache**/
+*.pyc
+*.pyo
+*.pyd
+*.pyc.*
+*.so
+
+# Virtual environment
+
+venv/
+.env/
+.venv/
+env/
+
+# ========================
+
+# Jupyter Notebook
+
+# ========================
+
+.ipynb_checkpoints/
+
+# ========================
+
+# Logs & temp
+
+# ========================
+
+*.log
+*.tmp
+*.swp
+
+# ========================
+
+# OS files
+
+# ========================
+
+.DS_Store
+Thumbs.db
+
+# ========================
+
+# IDE
+
+# ========================
+
+.vscode/
+.idea/
+
+# ========================
+
+# Data & Models (AI/ML)
+
+# ========================
+
+data/
+datasets/
+*.tsv
+
+# Model files
+
+*.h5
+*.hdf5
+*.pt
+*.pth
+*.onnx
+*.ckpt
+*.pb
+
+# Large files
+
+*.zip
+*.tar
+*.gz
+
+# ========================
+
+# Outputs
+
+# ========================
+
+outputs/
+results/
+runs/
+checkpoints/
+
+# ========================
+
+# Misc
+
+# ========================
+
+*.bak
+*.cache
